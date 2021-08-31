@@ -61,18 +61,22 @@ public class FileController {
 	@PostMapping("/upload/image")
 	@ResponseBody
 	public String uploadFile(MultipartFile file) throws Exception {
+
+		System.out.println("上传文件");
 		// 参数列表
 		Map<String, Object> map = new HashMap<>();
 		map.put("file", file);
 		savePic(file.getInputStream(), file.getOriginalFilename());
 		//请求接口
-		return "www.tangle.ink:8085/download/image/"+file.getOriginalFilename();
+		return "www.tangle.ink:8085/admin/file/download?fileName="+file.getOriginalFilename();
 	}
 
 
 	@GetMapping("/download/image")
 	@ResponseBody
 	public void downloadFile(@RequestParam String fileName, HttpServletResponse response) throws IOException {
+
+		System.out.println("下载文件");
 
 		String path = System.getProperty("user.dir")+ File.separator+fileName;
 		File tempFile = new File(path);

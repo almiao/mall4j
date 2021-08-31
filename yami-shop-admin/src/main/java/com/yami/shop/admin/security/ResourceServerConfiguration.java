@@ -42,6 +42,7 @@ public class ResourceServerConfiguration extends ResourceServerConfigurerAdapter
                 .and()
                 .authorizeRequests()
                 .antMatchers(
+                        "/admin/file/**",
                         "/webjars/**",
                         "/swagger/**",
                         "/v2/api-docs",

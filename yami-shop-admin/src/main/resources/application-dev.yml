@@ -22,3 +22,13 @@ spring:
       config: classpath:redisson.yml
 logging:
   config: classpath:log4j2_dev.xml
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
+
