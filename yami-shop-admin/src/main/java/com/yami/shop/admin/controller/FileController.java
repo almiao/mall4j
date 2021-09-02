@@ -68,7 +68,7 @@ public class FileController {
 		map.put("file", file);
 		savePic(file.getInputStream(), file.getOriginalFilename());
 		//请求接口
-		return "www.tangle.ink:8085/admin/file/download?fileName="+file.getOriginalFilename();
+		return "https://www.tangle.ink:8085/admin/file/download/image?fileName="+file.getOriginalFilename();
 	}
 
 
