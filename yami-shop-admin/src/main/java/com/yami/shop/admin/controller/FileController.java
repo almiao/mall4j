@@ -10,23 +10,19 @@
 
 package com.yami.shop.admin.controller;
 
-import java.io.*;
-import java.net.URLEncoder;
-import java.util.HashMap;
-import java.util.Map;
-
-import jdk.jfr.events.ExceptionThrownEvent;
+import com.yami.shop.common.bean.Qiniu;
+import com.yami.shop.service.AttachFileService;
 import org.apache.commons.io.IOUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.yami.shop.bean.dto.TinymceEditorDto;
-import com.yami.shop.common.bean.Qiniu;
-import com.yami.shop.service.AttachFileService;
-
 import javax.servlet.http.HttpServletResponse;
+import java.io.*;
+import java.net.URLEncoder;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * 文件上传 controller
