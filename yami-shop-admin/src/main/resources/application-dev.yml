@@ -1,5 +1,11 @@
 server:
   port: 8085
+  ssl:
+    key-store: classpath:www-tangle-ink-0901133425.pfx
+    key-store-password: dHzfY90f
+    key-store-type: PKCS12
+    enabled: true
+
 spring:
   datasource:
     url: jdbc:mysql://39.101.188.252:3306/yami_shops?userSSL=false
